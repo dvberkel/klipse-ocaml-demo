@@ -1,7 +1,21 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8"/>
         <title>klipse oCaml demo</title>
     </head>
     <h1>klipse oCaml demo</h1>
+    <pre><code id="input">
+let rec fib (n: int): int =
+  match n with
+    | 0 -> 0
+    | 1 -> 1
+    | _ -> (fib (n - 1)) + (fib (n - 2))
+
+let () =
+  Js.log (fib 6)
+    </code></pre>
+    <pre><code id="output"></code></pre>
+    <script src="https://raw.githubusercontent.com/bloomberg/bucklescript/master/docs/js-demo/exports.js"></script>
+    <script src="resources/js/application.js"></script>
 </html>
